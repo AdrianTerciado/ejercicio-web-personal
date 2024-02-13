@@ -1,0 +1,261 @@
+/* La parte más general*/
+:root {
+    --azulOscuro: #131141;
+    --casiBlanco: #f9fcf1;
+    --lilaClaro: #728ff3;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    /* Para header full width (body es el contenedor del header) */
+}
+
+/*Header*/
+header {
+    background-color: var(--azulOscuro);
+    position: sticky;
+    /* No funciona */
+}
+
+.headerTop {
+    color: var(--casiBlanco);
+    display: flex;
+    /* Para que el logo y el nombre de la web se alineen en horizontal */
+    justify-content: center;
+    /* Los elementos siempre están centrados aunque varie el ancho de la pantalla */
+    align-items: center;
+}
+
+.logoWeb {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.nombreWeb {
+    font-size: 28px;
+    text-align: center;
+    /* Para que el texto, dentro de su caja, se alinee en el centro */
+}
+
+.headerBottom {
+    display: flex;
+    justify-content: space-around;
+    /* El espacio se reparte proporcionlmente*/
+}
+
+.enlaces {
+    color: #f9fcf1;
+    font-size: small;
+    text-decoration: none;
+    font-weight: bold;
+    /* Ponemos en negrita */
+}
+
+.enlaces:hover {
+    background-color: #728ff3;
+}
+
+/* Main */
+.fotoMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.fotoMain>img {
+    width: 100%;
+    max-height: 400px;
+    min-height: 150px;
+}
+
+.fotoMain>h2 {
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+.cabeceraBloque {
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.bloqueArticulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 280px;
+    height: 280px;
+    margin: 7px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+article>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px rgb(77, 77, 77);
+}
+
+article>h4 {
+    position: absolute;
+    color: #f9fcf1;
+    font-size: 2rem;
+}
+
+/* Destinos */
+video{
+    max-width: 100%;
+}
+
+#maullidos{
+    margin: 0 auto;
+}
+
+/* Nosotros */
+.contenedorNosotros {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px rgb(77, 77, 77);
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenedorNosotros>img {
+    width: 95%;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.contenedorNosotros>p {
+    max-width: 95%;
+    align-items: center;
+    padding: 10px;
+}
+
+/*Contacto*/
+
+
+form {
+    border: 1px solid black;
+    background-color: #728ff3;
+    box-shadow: 8px 8px 10px rgb(77, 77, 77);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 20px;
+    align-items: center;
+    margin: 5px auto;
+}
+
+input,
+textarea {
+    border-radius: 15px;
+    padding: 10px;
+    width: 90%;
+    margin: 5px auto;
+}
+
+/* Footer*/
+footer {
+    background-color: #131141;
+    color: #f9fcf1;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer>p {
+    padding: 20px;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 700px) {
+    .nombreWeb {
+        font-size: 40px;
+    }
+
+    .enlaces {
+        font-size: large;
+    }
+
+    .fotoMain>h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .contenedorNosotros {
+        width: 80%;
+    }
+
+    .contenedorNosotros>img {width: 75%;}
+
+    .contenedorNosotros>p {width: 75%;}
+
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1200px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* Alinea elementos verticalmente*/
+    }
+
+    .fotoMain>h2 {
+        font-size: 3rem;
+    }
+
+    .enlaces {
+        margin-right: 5px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    input,
+    textarea {
+        width: 90%;
+    }
+
+    .contenedorNosotros {
+        width: 70%;
+    }
+
+    .contenedorNosotros>img {
+        width: 45%;
+    }
+
+    .contenedorNosotros>p {
+        max-width: 45%;
+    }
+}
