@@ -6,7 +6,7 @@
 }
 
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Comfortaa", sans-serif;
 }
 
 body {
@@ -119,11 +119,11 @@ article>h4 {
 }
 
 /* Destinos */
-video{
+video {
     max-width: 100%;
 }
 
-#maullidos{
+#maullidos {
     margin: 0 auto;
 }
 
@@ -210,9 +210,13 @@ footer>p {
         width: 80%;
     }
 
-    .contenedorNosotros>img {width: 75%;}
+    .contenedorNosotros>img {
+        width: 75%;
+    }
 
-    .contenedorNosotros>p {width: 75%;}
+    .contenedorNosotros>p {
+        width: 75%;
+    }
 
 }
 
@@ -252,7 +256,9 @@ footer>p {
     }
 
     .contenedorNosotros>img {
-        width: 45%;
+        width: 450px;
+        height: 380px;
+        margin-top: 20px;
     }
 
     .contenedorNosotros>p {
