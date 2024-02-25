@@ -18,7 +18,8 @@ body {
 header {
     background-color: var(--azulOscuro);
     position: sticky;
-    /* No funciona */
+    top: 0px;
+    z-index: 1;
 }
 
 .headerTop {
@@ -165,6 +166,7 @@ form {
     border-radius: 20px;
     align-items: center;
     margin: 5px auto;
+    padding: 5px;
 }
 
 input,

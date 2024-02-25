@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
 </head>
 
 <body>
@@ -35,17 +36,19 @@
 
         <h3 class="cabeceraBloque">Rellena el formulario</h3>
 
-        <form action="">
+        <form action="" id="formularioContacto">
+
+            <span id="mensajeError"></span>
 
             <label for="first_name">Nombre:</label>
             <input type="text" name="first_name" id="first_name" autofocus="autofocus" placeholder="Escriba su nombre"
-                tabindex="1" />
+                tabindex="1" required/>
 
             <label for="last_name">Apellido:</label>
-            <input type="text" name="last_name" id="last_name" placeholder="Escriba su primer apellido" tabindex="2">
+            <input type="text" name="last_name" id="last_name" placeholder="Escriba su primer apellido" tabindex="2" required>
 
             <label for="age">Edad:</label>
-            <input type="number" name="age" id="age" min="55" max="110" placeholder="Edad" tabindex="3" />
+            <input type="number" name="age" id="age" min="16" max="100" placeholder="Edad" tabindex="3" required/>
 
             <label>Sexo: </label>
             <label for="male">Hombre</label>
@@ -54,21 +57,21 @@
             <input type="radio" name="gender" id="female" tabindex="5" />
 
             <label for="about_you" id="caja_texto">Escribe algo sobre tí:</label>
-            <textarea name="about_you" id="about_you" cols="20" rows="4" placeholder="Cuéntanos"
+            <textarea name="about_you" id="about_you" cols="20" rows="4" placeholder="Campo no obligatorio"
                 tabindex="6"></textarea>
 
             <label for="email">Correo electrónico: </label>
-            <input type="email" name="email" id="email" tabindex="7" placeholder="Escriba su email">
+            <input type="email" name="email" id="email" tabindex="7" placeholder="Escriba su email" required>
 
             <label for="telephone">Número de teléfono: </label>
-            <input type="tel" name="telephone" id="telephone" tabindex="8" placeholder="Escriba su teléfono">
+            <input type="tel" name="telephone" id="telephone" tabindex="8" placeholder="Escriba su teléfono" pattern="[0-9]{9}" required>
 
             <label for="want">¿Quieres que te avisemos de nuevas entradas en el blog?</label>
             <input type="checkbox" name="want" id="want" tabindex="9">
 
             <input type="reset" name="reset" id="reset" tabindex="10" />
 
-            <input type="submit" name="submit" id="submit" tabindex="11" />
+            <input type="submit" value="Enviar" name="Enviar" id="Enviar" tabindex="11" />
 
         </form>
 
